@@ -48,13 +48,13 @@ if (selected == 'Covid 19 Prediction'):
         Urine - Sugar = st.text_input('Urine Sugar')
     
     with col3:
-        Prothrombin time (PT), Activity = st.text_input('Prothrombin time (PT), Activity')
+        Prothrombin PT , Activity = st.text_input('Prothrombin time (PT), Activity')
     
     with col1:
         D-Dimer = st.text_input('D-Dimer')
     
     with col2:
-        Fio2 (venous blood gas analysis) = st.text_input('Fio2 (venous blood gas analysis)')
+        Fio2 = st.text_input('Fio2 (venous blood gas analysis)')
     
     with col3:
         Urine - Nitrite = st.text_input('Urine - Nitrite')
