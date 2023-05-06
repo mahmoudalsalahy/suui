@@ -71,7 +71,7 @@ if (selected == 'Covid 19 Prediction'):
     # creating a button for Prediction
     
     if st.button('Diabetes Test Result'):
-        covid_prediction = covid_19_model.predict([[Mycoplasma pneumoniae , Urine - Sugar , Prothrombin time (PT), Activity , D-Dimer , Fio2 (venous blood gas analysis) , Urine - Nitrite , Vitamin B12 ]])
+        covid_prediction = covid_19_model.predict([[Mycoplasma , Urine - Sugar , Prothrombin PT , Activity , D-Dimer , Fio2  , Urine - Nitrite , Vitamin B12 ]])
         
         if (diab_prediction[0] == 1):
           covid_diagnosis = 'The person is corona holder'
