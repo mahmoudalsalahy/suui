@@ -60,13 +60,13 @@ if (selected == 'Covid 19 Prediction'):
         Segmented = st.text_input('Segmented')
     
     with col1:
-        CTO2 = st.text_input('ctO2 (arterial blood gas analysis)')
+        CTO2 = st.text_input('CTO2')
     
     with col2:
-        PCO2 = st.text_input('pCO2 (arterial blood gas analysis)')
+        PCO2 = st.text_input('PCO2')
     
     with col3:
-        HCO3 = st.text_input('HCO3 (venous blood gas analysis)')
+        HCO3 = st.text_input('HCO3')
     
     
     
