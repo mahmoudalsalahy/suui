@@ -42,7 +42,7 @@ if (selected == 'Covid 19 Prediction'):
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        Mycoplasma pneumoniae = st.text_input('Mycoplasma pneumoniae')
+        Mycoplasma  = st.text_input('Mycoplasma pneumoniae')
         
     with col2:
         Urine - Sugar = st.text_input('Urine Sugar')
