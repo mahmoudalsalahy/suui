@@ -11,7 +11,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
+covid_19_model = pickle.load(open('covid_19_model.sav', 'rb'))
 
 heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
@@ -22,9 +22,9 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('Lung Diseases Prediction',
                           
-                          ['Diabetes Prediction',
+                          ['Covid 19',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
                           icons=['activity','heart','person'],
@@ -32,54 +32,53 @@ with st.sidebar:
     
     
 # Diabetes Prediction Page
-if (selected == 'Diabetes Prediction'):
+if (selected == 'Covid 19 Prediction'):
     
     # page title
-    st.title('Diabetes Prediction using ML')
+    st.title('Covid 19 Prediction using ML')
     
     
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        Pregnancies = st.text_input('Number of Pregnancies')
+        Mycoplasma pneumoniae = st.text_input('Mycoplasma pneumoniae')
         
     with col2:
-        Glucose = st.text_input('Glucose Level')
+        Urine - Sugar = st.text_input('Urine Sugar')
     
     with col3:
-        BloodPressure = st.text_input('Blood Pressure value')
+        Prothrombin time (PT), Activity = st.text_input('Prothrombin time (PT), Activity')
     
     with col1:
-        SkinThickness = st.text_input('Skin Thickness value')
+        D-Dimer = st.text_input('D-Dimer')
     
     with col2:
-        Insulin = st.text_input('Insulin Level')
+        Fio2 (venous blood gas analysis) = st.text_input('Fio2 (venous blood gas analysis)')
     
     with col3:
-        BMI = st.text_input('BMI value')
+        Urine - Nitrite = st.text_input('Urine - Nitrite')
     
     with col1:
-        DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
+        Vitamin B12 = st.text_input('Vitamin B12')
     
-    with col2:
-        Age = st.text_input('Age of the Person')
+    
     
     
     # code for Prediction
-    diab_diagnosis = ''
+    covid_diagnosis = ''
     
     # creating a button for Prediction
     
     if st.button('Diabetes Test Result'):
-        diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+        covid_prediction = covid_19_model.predict([[Mycoplasma pneumoniae , Urine - Sugar , Prothrombin time (PT), Activity , D-Dimer , Fio2 (venous blood gas analysis) , Urine - Nitrite , Vitamin B12 ]])
         
         if (diab_prediction[0] == 1):
-          diab_diagnosis = 'The person is diabetic'
+          covid_diagnosis = 'The person is corona holder'
         else:
-          diab_diagnosis = 'The person is not diabetic'
+          covid_diagnosis = 'The person is not corona holder'
         
-    st.success(diab_diagnosis)
+    st.success(covid_diagnosis)
 
 
 
