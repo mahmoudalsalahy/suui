@@ -42,26 +42,31 @@ if (selected == 'Covid 19 Prediction'):
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        Mycoplasma  = st.text_input('Mycoplasma pneumoniae')
+        Platelets  = st.text_input('Platelets')
         
     with col2:
-        Urine_Sugar = st.text_input('Urine Sugar')
+        Leukocytes = st.text_input('Leukocytes')
     
     with col3:
-        Prothrombin_PT_Activity = st.text_input('Prothrombin PT Activity')
+        Eosinophils = st.text_input('Eosinophils')
     
     with col1:
-        D_Dimer = st.text_input('D Dimer')
+        Monocytes = st.text_input('Monocytes')
     
     with col2:
-        Fio2 = st.text_input('Fio2')
+        Hemoglobin = st.text_input('Hemoglobin')
     
     with col3:
-        Urine_Nitrite = st.text_input('Urine Nitrite')
+        Segmented = st.text_input('Segmented')
     
     with col1:
-        Vitamin_B12 = st.text_input('Vitamin B12')
+        ctO2 (arterial blood gas analysis) = st.text_input('ctO2 (arterial blood gas analysis)')
     
+    with col2:
+        pCO2 (arterial blood gas analysis) = st.text_input('pCO2 (arterial blood gas analysis)')
+    
+    with col3:
+        HCO3 (venous blood gas analysis) = st.text_input('HCO3 (venous blood gas analysis)')
     
     
     
