@@ -76,7 +76,7 @@ if (selected == 'Covid 19 Prediction'):
     # creating a button for Prediction
     
     if st.button('Covid 19 Test Result'):
-        covid_prediction = covid_19_model.predict([ Platelets , Leukocytes , Eosinophils , Monocytes , Hemoglobin , Segmented , CTO2 , PCO2 , HCO3 ]])
+        covid_prediction = covid_19_model.predict([[ Platelets , Leukocytes , Eosinophils , Monocytes , Hemoglobin , Segmented , CTO2 , PCO2 , HCO3 ]])
         
         if (diab_prediction[0] == 1):
           covid_diagnosis = 'The person is corona holder'
