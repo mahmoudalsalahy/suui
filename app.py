@@ -45,22 +45,22 @@ if (selected == 'Covid 19 Prediction'):
         Mycoplasma  = st.text_input('Mycoplasma pneumoniae')
         
     with col2:
-        Urine Sugar = st.text_input('Urine Sugar')
+        Urine_Sugar = st.text_input('Urine Sugar')
     
     with col3:
-        Prothrombin PT , Activity = st.text_input('Prothrombin time (PT), Activity')
+        Prothrombin_PT_Activity = st.text_input('Prothrombin time (PT), Activity')
     
     with col1:
-        D Dimer = st.text_input('D-Dimer')
+        D_Dimer = st.text_input('D-Dimer')
     
     with col2:
         Fio2 = st.text_input('Fio2 (venous blood gas analysis)')
     
     with col3:
-        Urine Nitrite = st.text_input('Urine - Nitrite')
+        Urine_Nitrite = st.text_input('Urine - Nitrite')
     
     with col1:
-        Vitamin B12 = st.text_input('Vitamin B12')
+        Vitamin_B12 = st.text_input('Vitamin B12')
     
     
     
@@ -71,7 +71,7 @@ if (selected == 'Covid 19 Prediction'):
     # creating a button for Prediction
     
     if st.button('Diabetes Test Result'):
-        covid_prediction = covid_19_model.predict([[Mycoplasma , Urine Sugar , Prothrombin PT , Activity , D Dimer , Fio2  , Urine Nitrite , Vitamin B12 ]])
+        covid_prediction = covid_19_model.predict([[Mycoplasma , Urine_Sugar , Prothrombin_PT_Activity , D_Dimer , Fio2  , Urine_Nitrite , Vitamin_B12 ]])
         
         if (diab_prediction[0] == 1):
           covid_diagnosis = 'The person is corona holder'
